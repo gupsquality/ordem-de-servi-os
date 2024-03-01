@@ -15,23 +15,19 @@ searchBtn.onclick = () => {
 
   request.open(
     "GET",
-    "http://195.35.18.97:3000/buscar-na-api?q=" + searchValue,
+    "https://srv486025.hstgr.cloud/buscar-na-api?q=" + searchValue,
     true
   );
 
   request.setRequestHeader("Content-Type", "application/json");
 
   request.onreadystatechange = function () {
-    console.log("Ready State:", this.readyState);
-
     if (this.readyState === 4) {
-      console.log("Status Code:", this.status);
-
       if (this.status === 200) {
         const bodyData = JSON.parse(this.responseText);
         codigo.innerText = `Código: ${bodyData.dados.data[0].codigo}`;
         nome_cliente.innerText = `Nome cliente: ${bodyData.dados.data[0].nome_cliente}`;
-       marca.innerText = `marca: ${bodyData.dados.data[0].equipamentos[0].equipamento.marca}`;
+        marca.innerText = `marca: ${bodyData.dados.data[0].equipamentos[0].equipamento.marca}`;
         modelo.innerText = `modelo: ${bodyData.dados.data[0].equipamentos[0].equipamento.modelo}`;
         serie.innerText = `serie: ${bodyData.dados.data[0].equipamentos[0].equipamento.serie}`;
         nome_situacao.innerText = `Situação: ${bodyData.dados.data[0].nome_situacao}`;

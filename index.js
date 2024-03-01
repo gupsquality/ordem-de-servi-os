@@ -29,7 +29,6 @@ searchBtn.onclick = () => {
 
       if (this.status === 200) {
         const bodyData = JSON.parse(this.responseText);
- console.log("Response Data:", bodyData);
         codigo.innerText = `Código: ${bodyData.dados.data[0].codigo}`;
         nome_cliente.innerText = `Nome cliente: ${bodyData.dados.data[0].nome_cliente}`;
        marca.innerText = `marca: ${bodyData.dados.data[0].equipamentos[0].equipamento.marca}`;

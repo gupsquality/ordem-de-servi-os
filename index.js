@@ -28,6 +28,7 @@ searchBtn.onclick = () => {
         codigo.innerText = `Código: ${bodyData.dados.data[0].codigo}`;
         nome_cliente.innerText = `Nome cliente: ${bodyData.dados.data[0].nome_cliente}`;
         marca.innerText = `marca: ${bodyData.dados.data[0].equipamentos[0].equipamento.marca}`;
+        console.log(`marca: ${bodyData.dados.data[0].equipamentos[0].equipamento.marca}`);
         modelo.innerText = `modelo: ${bodyData.dados.data[0].equipamentos[0].equipamento.modelo}`;
         serie.innerText = `serie: ${bodyData.dados.data[0].equipamentos[0].equipamento.serie}`;
         nome_situacao.innerText = `Situação: ${bodyData.dados.data[0].nome_situacao}`;
@@ -44,3 +45,4 @@ searchBtn.onclick = () => {
 
   request.send();
 };
+

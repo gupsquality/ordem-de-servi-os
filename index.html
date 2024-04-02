@@ -49,7 +49,9 @@
       font-size: 15px;
       border: none;
     }
-
+p{
+  margin-left: 10px;
+}
     .p1 {
       margin-left: 20px;
     }
@@ -80,6 +82,7 @@
       padding: 10px;
       border-radius: 10px;
       margin-top: 20px;
+      display: block;
     }
 
     hr {
@@ -92,8 +95,19 @@
       padding: 5px;
       border-radius: 10px;
       margin-top: 10px;
+      display: none;
 
     }
+    @media (min-width: 576px) {
+      .container {
+        padding: 20px;
+      }
+    }
+    .green-block {
+      background-color: rgba(78, 165, 78, 0.719);
+      padding: 5px;
+      border-radius: 10px;
+      margin-top: 10px;}
   </style>
 </head>
 
@@ -106,13 +120,13 @@
   <div>
     <hr>
     <div class="p1">
-      <p>Número da Ordem de Serviço</p>
+      <strong><p>Número da Ordem de Serviço</p></strong>
     </div>
     <input id="search_input" />
     <button id="search_button">
       <strong>Buscar</strong>
     </button>
-
+<p>Entrar em contato com o suporte (61)99373-5050.</p>
     <div class="p2">
       <p id="codigo"></p>
     </div>
@@ -132,7 +146,6 @@
         <div class="green-block"><p id="nome_situacao"></p></div>
       </div>
     </div>
-    <div class="overlay" id="overlay"></div> <!-- Novo elemento de sobreposição -->
     <img src="./logo.png" alt="">
   </div>
 </body>

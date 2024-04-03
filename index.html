@@ -19,8 +19,11 @@
     }
 
     img {
-      margin-left: 550px;
-      margin-top: 50px;
+      display: block;
+      margin: 0 auto;
+      margin-top: 20px;
+      max-width: 100%;
+      height: auto;
     }
 
     .container {
@@ -32,90 +35,52 @@
 
     h3 {
       text-align: center;
-      padding-left: 50px;
-      padding-right: 70px;
+      padding: 0 10px;
     }
 
     input {
-      margin-left: 20px;
-      background-color: #cfcfcf;
+      width: calc(100% - 40px);
+      margin: 0 auto;
+      display: block;
+      margin-bottom: 10px;
     }
 
     button {
       background-color: #4046a0;
       color: #f4f4f4;
       border-radius: 10px;
-      padding: 5px;
+      padding: 5px 10px;
       font-size: 15px;
       border: none;
-    }
-p{
-  margin-left: 10px;
-}
-    .p1 {
-      margin-left: 20px;
-    }
-
-    .p2 {
-      margin-left: 20px;
-    }
-
-    .p3 {
-      margin-left: 20px;
-    }
-
-    .p4 {
-      margin-left: 20px;
-    }
-
-    .p5 {
-      margin-left: 20px;
-    }
-
-    .p6 {
-      margin-left: 20px;
-    }
-
-    .p7 {
-      margin-left: 20px;
-      margin-right: 800px;
-      padding: 10px;
-      border-radius: 10px;
-      margin-top: -25px;
       display: block;
+      margin: 0 auto;
     }
-    .p8 {
-      margin-left: 350px;
-      margin-right: 30px;
-      padding: 10px;
-      border-radius: 10px;
-      margin-top: -25px;
-      display: block;
+
+    p {
+      margin: 5px 10px;
     }
 
     hr {
-      margin-left: 20px;
-      margin-right: 20px;
+      margin: 10px 0;
     }
 
     .green-block {
       background-color: rgba(78, 165, 78, 0.719);
-      padding: 5px;
+      padding: 10px;
       border-radius: 10px;
       margin-top: 10px;
-      display: none;
+      margin-right: 900px;
+     
+    }
 
-    }
-    @media (min-width: 576px) {
-      .container {
-        padding: 20px;
+    @media (max-width: 320px) {
+      input, button {
+        width: calc(100% - 20px);
       }
-    }
-    .green-block {
-      background-color: rgba(78, 165, 78, 0.719);
-      padding: 5px;
-      border-radius: 10px;
-      margin-top: 10px;}
+   }
+    
+     
+    
   </style>
 </head>
 
@@ -125,15 +90,13 @@ p{
   </div>
 
   <h3>Aqui você pode acompanhar o andamento de sua ordem de serviço aberta para o seu produto em nossa rede de Serviço Técnico Autorizado.</h3>
+
+  <hr>
+
   <div>
-    <hr>
-    <div class="p1">
-      <strong><p>Número da Ordem de Serviço</p></strong>
-    </div>
+    <p><strong>Número da Ordem de Serviço</strong></p>
     <input id="search_input" />
-    <button id="search_button">
-      <strong>Buscar</strong>
-    </button>
+    <button id="search_button">Buscar</button>
     <div class="p2">
       <p id="codigo"></p>
     </div>
@@ -150,11 +113,16 @@ p{
       <p id="serie"></p>
     </div>
     <div class="p7">
-       <p id="nome_situacao"></p>
+      <div class="green-block">
+        <p id="nome_situacao"></p>
+      </div>
     </div>
     <img src="./logo.png" alt="">
   </div>
-  <div class="p8"><p>Em caso de mau funcionamento entre em contato com o suporte (61) 9 9373-5050.</p></div>
+
+  <div>
+    <p>Em caso de mau funcionamento entre em contato com o suporte (61) 9 9373-5050.</p>
+  </div>
 
 </body>
 
